@@ -145,7 +145,9 @@ We will report also in a table all the measures that we obtained using the vario
 
 
 ### SVM Baseline
-
+A baseline is a method that uses heuristics, simple summary statistics, randomness, or machine learning to create predictions for a dataset. You can use these predictions to measure the baseline's performance (e.g., accuracy)-- this metric will then become what you compare any other machine learning algorithm against.
+We used a simply Support Vector Machine as baseline in order to compare our more sophisticated models with this one.
+As you can see in the table above we obtained an accuracy of 47.77%
 
 
 
