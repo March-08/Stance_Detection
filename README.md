@@ -67,11 +67,11 @@
 ## About The Project
 
 
-This project was developed for the [Web Mining and Retrivial class (CS)](http://ai-nlp.info.uniroma2.it/basili/didattica/WmIR_18_19/) at the [University of Tor Vergata](http://www.informatica.uniroma2.it/).
-Under the supervision of **prof. Roberto Basili** and **prof. Danilo Croce**, we were able to develop a Stance Detection Classifier based on Bert model, that was released by Google, and that was published for the firt time in the paper: [BERT: Pre-training of Deep Bidirectional Transformers for
-Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
+This project was developed for the [Web Mining and Retrivial class (CS)](http://ai-nlp.info.uniroma2.it/basili/didattica/WmIR_18_19/) at the [University of Tor Vergata](http://www.informatica.uniroma2.it/).<br/>
+Under the supervision of **prof. Roberto Basili** and **prof. Danilo Croce**, we were able to develop a Stance Detection Classifier based on Bert model, that was released by Google, and that was published for the firt time in the following paper ["BERT: Pre-training of Deep Bidirectional Transformers for
+Language Understanding"](https://arxiv.org/pdf/1810.04805.pdf)
 
-While working on this project we took the opportunity to partecipate to the [EVALITA 2020](http://www.evalita.it/). competition.
+While working on this project we took the opportunity to partecipate to the [EVALITA 2020](http://www.evalita.it/) competition.
 EVALITA is a periodic evaluation campaign of Natural Language Processing (NLP) and speech tools for the Italian language, born in 2007.
 This year EVALITA provided a task called [SardiStance](http://www.di.unito.it/~tutreeb/sardistance-evalita2020/index.html), that is basically a stance detection task, using a data-set containing Italian tweets about the [Sardines Movement](https://en.wikipedia.org/wiki/Sardines_movement).
 
@@ -85,7 +85,7 @@ The evaluation will be performed according to the standard metrics known in lite
 ### Built With
 * [Google Colab](https://colab.research.google.com/github/tensorflow/examples/blob/master/courses/udacity_intro_to_tensorflow_for_deep_learning/l01c01_introduction_to_colab_and_python.ipynb)
 * [PyTorch](https://pytorch.org/)
-* [Laravel](https://laravel.com)
+
 
 
 
@@ -133,7 +133,16 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+The creation of the final model used for the EVALITA competition has seen many changes over time, we would like to explain here every strategies that we used in order to modify the simple Bert model provided by Google, and how we obtained the best classifier for this stance detection task.
+We will report also in a table all the measures that we obtained using the various models that we delevoped during tests.
+
+## Measures Reports
+
+
+
+### SVM Baseline
+
+
 
 
 
