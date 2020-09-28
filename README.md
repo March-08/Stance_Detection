@@ -25,7 +25,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="IMAGES/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/March-08/Stance_Detetion/blob/master/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Stance Detection</h3>
