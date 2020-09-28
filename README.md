@@ -138,6 +138,10 @@ We will report also in a table all the measures that we obtained using the vario
 
 ## Measures Reports
 
+<img src="https://github.com/March-08/Stance_Detetion/blob/master/Cattura.PNG"/>
+
+
+
 
 
 ### SVM Baseline
