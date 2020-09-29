@@ -86,6 +86,60 @@ The evaluation will be performed according to the standard metrics known in lite
 * [Google Colab](https://colab.research.google.com/github/tensorflow/examples/blob/master/courses/udacity_intro_to_tensorflow_for_deep_learning/l01c01_introduction_to_colab_and_python.ipynb)
 * [PyTorch](https://pytorch.org/)
 
+## Our Strategy
+
+The main issue facing this task was that the dataset provided was very poor, it consisted in of 3,242 instances, in fact simply by using Bert we obtained a low accuracy, about 56%.
+So thought to train Bert on a differents but similiars tasks, and to use the resulting model to tag the tweets of our original dataset.
+In this way each tag could give a hint about the sentence it was associated with.
+The tasks we used for this purpose are:
+- sentiment analysis
+- hate speech detection
+- irony detection
+
+### Sentiment Analysis
+The task consists in automatically annotating messages from the popular microblogging platform Twitter1 with a tuple of boolean values indicating the message’s subjectivity and polarity (positive or negative).
+We used the dataset provided by EVALITA for the [SENTIPOLC](http://www.evalita.it/2016/tasks/sentipolc) challenge.
+We trained our model with the sentipolc dataset, and we obtained an accuracy of, NUMERO%.
+In this way we could tag with [PRO] [CONTRO] every sentence of the SardiStance dataset, using the model obtained from the sentiment task.
+At the end, we processed our new dataset (cointaining the new tag for each tweet), and we observed that the mean accuracy over 10 cross folder validation improved, we obtained an mean accuracy of NUMERO%, with a standard deviation of NUMERO%.
+
+
+### Hate Speech Detection
+This is a binary classification task aimed at determining whether the message contains Hate Speech or not
+We used the dataset provided by EVALITA for the [HATE SPEECH](http://www.di.unito.it/~tutreeb/haspeede-evalita18/index.html) challenge.
+We trained our model with the hate speech dataset, and we obtained an accuracy of, NUMERO%.
+In this way we could tag with [ODIO] [NON ODIO] every sentence of the SardiStance dataset, using the model obtained from the sentiment task.
+At the end, we processed our new dataset (cointaining the new tag for each tweet), and we observed that the mean accuracy over 10 cross folder validation improved, we obtained an mean accuracy of NUMERO%, with a standard deviation of NUMERO%.
+
+
+### Irony Detection
+
+
+### Majority Voting
+
+
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+The creation of the final model used for the EVALITA competition has seen many changes over time, we would like to explain here every strategies that we used in order to modify the simple Bert model provided by Google, and how we obtained the best classifier for this stance detection task.
+We will report also in a table all the measures that we obtained using the various models that we delevoped during tests.
+
+##£ Measures Reports
+
+<img src="https://github.com/March-08/Stance_Detetion/blob/master/Cattura.PNG"/>
+
+
+
+
+
+### SVM Baseline
+A baseline is a method that uses heuristics, simple summary statistics, randomness, or machine learning to create predictions for a dataset. You can use these predictions to measure the baseline's performance (e.g., accuracy)-- this metric will then become what you compare any other machine learning algorithm against.
+We used a simply Support Vector Machine as baseline in order to compare our more sophisticated models with this one.
+As you can see in the table above we obtained an accuracy of 47.77%
+
 
 
 
@@ -127,27 +181,6 @@ const API_KEY = 'ENTER YOUR API';
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-The creation of the final model used for the EVALITA competition has seen many changes over time, we would like to explain here every strategies that we used in order to modify the simple Bert model provided by Google, and how we obtained the best classifier for this stance detection task.
-We will report also in a table all the measures that we obtained using the various models that we delevoped during tests.
-
-## Measures Reports
-
-<img src="https://github.com/March-08/Stance_Detetion/blob/master/Cattura.PNG"/>
-
-
-
-
-
-### SVM Baseline
-A baseline is a method that uses heuristics, simple summary statistics, randomness, or machine learning to create predictions for a dataset. You can use these predictions to measure the baseline's performance (e.g., accuracy)-- this metric will then become what you compare any other machine learning algorithm against.
-We used a simply Support Vector Machine as baseline in order to compare our more sophisticated models with this one.
-As you can see in the table above we obtained an accuracy of 47.77%
 
 
 
