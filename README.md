@@ -88,8 +88,9 @@ The evaluation will be performed according to the standard metrics known in lite
 
 ## Our Strategy
 
-The main issue facing this task was that the dataset provided was very poor, it consisted in of 3,242 instances, in fact simply by using Bert we obtained a low accuracy, about 56%.
-So thought to train Bert on a differents but similiars tasks, and to use the resulting model to tag the tweets of our original dataset.
+The main issue facing this task was that the dataset provided was very poor, it consisted in of 3,242 instances, in fact simply by using UmBERTo we obtained a low accuracy, about 56%.
+**UmBERTo** is an Italian Language Model thatinherits from RoBERTa base model architecture which improves the initial BERT.
+So we thought to train UmBERTO on differents but similiars tasks, and to use the resulting model to tag the tweets of our original dataset.
 In this way each tag could give a hint about the sentence it was associated with.
 The tasks we used for this purpose are:
 - sentiment analysis
@@ -101,21 +102,35 @@ The task consists in automatically annotating messages from the popular microblo
 We used the dataset provided by EVALITA for the [SENTIPOLC](http://www.evalita.it/2016/tasks/sentipolc) challenge.
 We trained our model with the sentipolc dataset, and we obtained an accuracy of, NUMERO%.
 In this way we could tag with [PRO] [CONTRO] every sentence of the SardiStance dataset, using the model obtained from the sentiment task.
-At the end, we processed our new dataset (cointaining the new tag for each tweet), and we observed that the mean accuracy over 10 cross folder validation improved, we obtained an mean accuracy of NUMERO%, with a standard deviation of NUMERO%.
+At the end, we processed our new dataset (cointaining the new tag for each tweet), and we observed that the mean accuracy over 10 cross folder validation improved from the first simple Bert model, we obtained an mean accuracy of NUMERO%, with a standard deviation of NUMERO%.
 
 
 ### Hate Speech Detection
 This is a binary classification task aimed at determining whether the message contains Hate Speech or not
 We used the dataset provided by EVALITA for the [HATE SPEECH](http://www.di.unito.it/~tutreeb/haspeede-evalita18/index.html) challenge.
 We trained our model with the hate speech dataset, and we obtained an accuracy of, NUMERO%.
-In this way we could tag with [ODIO] [NON ODIO] every sentence of the SardiStance dataset, using the model obtained from the sentiment task.
-At the end, we processed our new dataset (cointaining the new tag for each tweet), and we observed that the mean accuracy over 10 cross folder validation improved, we obtained an mean accuracy of NUMERO%, with a standard deviation of NUMERO%.
+In this way we could tag with [ODIO] [NON ODIO] every sentence of the SardiStance dataset, using the model obtained from the hate speech detection task.
+At the end, we processed our new dataset (cointaining the new tag for each tweet), and we observed that the mean accuracy over 10 cross folder validation improved from the first simple Bert model, we obtained an mean accuracy of NUMERO%, with a standard deviation of NUMERO%.
 
 
 ### Irony Detection
+This is a classification task where the system has to predict whether a tweet is ironic or not, so given a message, decide whether the message is ironic or not.
+We used the dataset provided by EVALITA for the [IronITA ](http://www.di.unito.it/~tutreeb/ironita-evalita18/index.html) challenge.
+We trained our model with the hate IronITA dataset, and we obtained an accuracy of, NUMERO%.
+In this way we could tag with [IRONICO] [NON IRONICO] every sentence of the SardiStance dataset, using the model obtained from the hate speech detection task.
+At the end, we processed our new dataset (cointaining the new tag for each tweet), and we observed that the mean accuracy over 10 cross folder validation improved from the first simple Bert model, we obtained an mean accuracy of NUMERO%, with a standard deviation of NUMERO%.
+
+### Conclusion
+We tried to use also multiple tags for each sentence, for example differents combinations of the tags derived from the tasks desribed above.
+The results are all stored in the following table.
+INSERIRE LA TABELLA
+As we can see the most accurate run, is the the one that uses a combination of HATE TAG and SENTIMENT TAG !!!!!!!!!!!!!!!!!!!!! CORRREGGi
 
 
 ### Majority Voting
+Ensemble methods are techniques that create multiple models and then combine them to produce improved results. Ensemble methods usually produces more accurate solutions than a single model would. 
+Using the majority voting every model makes a prediction (votes) for each test instance and the final output prediction is the one that receives more than half of the votes. If none of the predictions get more than half of the votes, we may say that the ensemble method could not make a stable prediction for this instance. Although this is a widely used technique, you may try the most voted prediction (even if that is less than half of the votes) as the final prediction. In some articles, you may see this method being called “plurality voting”.
+Using the majority voting we obtained an accuracy of NUMERO%.
 
 
 
