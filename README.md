@@ -120,7 +120,7 @@ We trained our model with the hate IronITA dataset, and we obtained an accuracy 
 In this way we could tag with [IRONICO] [NON IRONICO] every sentence of the SardiStance dataset, using the model obtained from the hate speech detection task.
 At the end, we processed our new dataset (cointaining the new tag for each tweet), and we observed that the mean accuracy over 10 cross folder validation improved from the first simple Bert model, we obtained an mean accuracy of NUMERO%, with a standard deviation of NUMERO%.
 
-### our choice
+### Our choice
 We tried to use also multiple tags for each sentence, for example differents combinations of the tags derived from the tasks desribed above.
 The results are all stored in the following table.
 INSERIRE LA TABELLA
